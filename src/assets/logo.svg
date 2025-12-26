@@ -1,0 +1,39 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e7ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clefGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- The Letter B -->
+  <text x="60" y="95" font-family="serif" font-weight="bold" font-size="100" fill="url(#bGrad)" text-anchor="middle" filter="url(#shadow)">B</text>
+
+  <!-- The Treble Clef "Snake" -->
+  <!-- Using a path to simulate the winding shape -->
+  <path d="M45 90 C 30 90, 30 70, 45 70 S 60 50, 60 40 S 50 20, 60 10 S 80 30, 70 50 S 50 70, 70 80 S 90 100, 70 110" 
+        stroke="url(#clefGrad)" 
+        stroke-width="5" 
+        fill="none" 
+        stroke-linecap="round" 
+        filter="url(#glow)" />
+        
+  <!-- Decorative elements to enhance "circling" feel -->
+  <circle cx="60" cy="35" r="3" fill="#8b5cf6" />
+  <circle cx="60" cy="105" r="4" fill="#8b5cf6" />
+  
+</svg>

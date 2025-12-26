@@ -1,0 +1,130 @@
+.projects {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.project-category {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.main-project-section {
+    margin-bottom: 5rem;
+}
+
+.main-project-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
+    border: 2px solid var(--primary-color);
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+}
+
+.main-project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.5);
+}
+
+.main-project-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-project-card p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.mini-projects-section {
+    margin-bottom: 4rem;
+}
+
+.mini-project-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.project-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tags span {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    background: rgba(139, 92, 246, 0.1);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--text-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.github-cta {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.github-cta p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}

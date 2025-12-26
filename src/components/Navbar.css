@@ -1,0 +1,140 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1.5rem 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    /* Ensure logo stays above mobile menu if needed */
+}
+
+.logo-img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    background-color: #050503;
+}
+
+.logo-img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Wrapper for desktop layout */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    /* Pushes contact to right */
+}
+
+.nav-center {
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-center a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.nav-center a:hover {
+    color: var(--primary-color);
+}
+
+.nav-contact {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    transition: var(--transition);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-contact:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: var(--transition);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 2rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+        border-bottom: 1px solid var(--glass-border);
+        z-index: 999;
+    }
+
+    .nav-wrapper.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-center {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-contact {
+        width: auto;
+    }
+}
